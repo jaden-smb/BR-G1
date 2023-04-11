@@ -86,77 +86,15 @@ def change_perspective_function(*args):
     
         persp = random.uniform(-360.0,360.0)
             
-        if persp <= 0 and persp > -45:
+        for i in range (0, 360, 45):
             
-            persp = -22.5
-        
-        if persp <= -45 and persp > -90:
-            
-            persp = -45
-            
-        if persp <= -90 and persp > -135:
-            
-            persp = -90
-            
-        if persp <= -135 and persp > -180:
-            
-            persp = -135
-            
-        if persp <= -180 and persp > -225:
-            
-            persp = -180
-            
-        if persp <= -225 and persp > -270:
-            
-            persp = -225
-            
-        if persp <= -270 and persp > -315:
-            
-            persp = -270
-            
-        if persp <= -315 and persp > -360:
-            
-            persp = -315
-            
-        if persp <= -360 and persp > -360:
-            
-            persp = -360
-        
-        if persp >= 0 and persp < 45:
-            
-            persp = 22.5
-        
-        if persp >= 45 and persp < 90:
-            
-            persp = 45
-            
-        if persp >= 90 and persp < 135:
-            
-            persp = 90
-            
-        if persp >= 135 and persp < 180:
-            
-            persp = 135
-            
-        if persp >= 180 and persp < 225:
-            
-            persp = 180
-            
-        if persp >= 225 and persp < 270:
-            
-            persp = 225
-            
-        if persp >= 270 and persp < 315:
-            
-            persp = 270
-            
-        if persp >= 315 and persp < 360:
-            
-            persp = 315
-            
-        if persp >= 360 and persp < 360:
-            
-            persp = 360
+            if persp <= i and persp > i-45:
+                
+                persp = i-22.5
+                
+            elif persp >= i and persp < i+45:
+                
+                persp = i+22.5
         
     if inputPerspective == 0:
     
@@ -172,77 +110,15 @@ def shape_creator_function(iterations,displacement,shapeSelection,secondShapeSel
     
         persp = random.uniform(-360.0,360.0)
             
-        if persp <= 0 and persp > -45:
+        for i in range (0, 360, 45):
             
-            persp = -22.5
-        
-        if persp <= -45 and persp > -90:
-            
-            persp = -45
-            
-        if persp <= -90 and persp > -135:
-            
-            persp = -90
-            
-        if persp <= -135 and persp > -180:
-            
-            persp = -135
-            
-        if persp <= -180 and persp > -225:
-            
-            persp = -180
-            
-        if persp <= -225 and persp > -270:
-            
-            persp = -225
-            
-        if persp <= -270 and persp > -315:
-            
-            persp = -270
-            
-        if persp <= -315 and persp > -360:
-            
-            persp = -315
-            
-        if persp <= -360 and persp > -360:
-            
-            persp = -360
-        
-        if persp >= 0 and persp < 45:
-            
-            persp = 22.5
-        
-        if persp >= 45 and persp < 90:
-            
-            persp = 45
-            
-        if persp >= 90 and persp < 135:
-            
-            persp = 90
-            
-        if persp >= 135 and persp < 180:
-            
-            persp = 135
-            
-        if persp >= 180 and persp < 225:
-            
-            persp = 180
-            
-        if persp >= 225 and persp < 270:
-            
-            persp = 225
-            
-        if persp >= 270 and persp < 315:
-            
-            persp = 270
-            
-        if persp >= 315 and persp < 360:
-            
-            persp = 315
-            
-        if persp >= 360 and persp < 360:
-            
-            persp = 360
+            if persp <= i and persp > i-45:
+                
+                persp = i-22.5
+                
+            elif persp >= i and persp < i+45:
+                
+                persp = i+22.5
         
     if randPerspective == 0:
     
@@ -635,178 +511,53 @@ def shape_creator_function(iterations,displacement,shapeSelection,secondShapeSel
 
 def shape_group_function(scl):
     
-    inputTextScaleUI2 = cmds.floatField("inputTextScale2", q = True, v = 1)
+    shapes = ['Cubo_centro*', 'Cubo_lateral*', 'Esfera_lateral*', 'Esfera_centro*', 'Cubo_merged*', 
+              'Cilindro_centro*', 'Cilindro_lateral*', 'Cono_centro*', 'Cono_lateral*', 'Toroide_centro*', 
+              'Toroide_lateral*', 'Piramide_centro*', 'Piramide_lateral*']
     
-    if cmds.objExists('Cubo_centro*'):
-        
-        cmds.select('Cubo_centro*',add = True)
-        
-    if cmds.objExists('Cubo_lateral*'):
-        
-        cmds.select('Cubo_lateral*',add = True)
-        
-    if cmds.objExists('Esfera_lateral*'):
-        
-        cmds.select('Esfera_lateral*',add = True)
-        
-    if cmds.objExists('Esfera_centro*'):
-        
-        cmds.select('Esfera_centro*',add = True)
-        
-    if cmds.objExists('Cubo_merged*'):
-        
-        cmds.select('Cubo_merged*',add = True)
-        
-    if cmds.objExists('Cilindro_centro*'):
-        
-        cmds.select('Cilindro_centro*',add = True)
-        
-    if cmds.objExists('Cilindro_lateral*'):
-        
-        cmds.select('Cilindro_lateral*',add = True)
-        
-    if cmds.objExists('Cono_centro*'):
-        
-        cmds.select('Cono_centro*',add = True)
-        
-    if cmds.objExists('Cono_lateral*'):
-        
-        cmds.select('Cono_lateral*',add = True)
-        
-    if cmds.objExists('Toroide_centro*'):
-        
-        cmds.select('Toroide_centro*',add = True)
-        
-    if cmds.objExists('Toroide_lateral*'):
-        
-        cmds.select('Toroide_lateral*',add = True)
-        
-    if cmds.objExists('Piramide_centro*'):
-        
-        cmds.select('Piramide_centro*',add = True)
-        
-    if cmds.objExists('Piramide_lateral*'):
-        
-        cmds.select('Piramide_lateral*',add = True)
-        
-    groupVar = cmds.group(n= "CH*")
-    cmds.setAttr("CH*"+".rotateY",50)
+    cmds.select(clear=True)
     
-    cmds.manipPivot(o = [0.0,0.0,0.0])
+    for shape in shapes:
+        if cmds.objExists(shape):
+            cmds.select(shape, add=True)
+            
+    groupVar = cmds.group(n="CH*")
     
-    pivotOrientation = cmds.manipPivot(q=True, o=True)[0]
-
+    cmds.setAttr("CH*"+".rotateY", 50)
+    cmds.manipPivot(o=[0.0, 0.0, 0.0])
     boundingBox = cmds.xform("CH*", q=True, bb=True, ws=True)
-    
-    cmds. move(boundingBox[1], "CH*"+ '.scalePivot', y=True, absolute=True)
-    cmds. move(boundingBox[1], "CH*"+ '.rotatePivot', y=True, absolute=True)
-    
-    cmds.setAttr( "CH*"+ '.translateY', -boundingBox[1])
-    
-    cmds.setAttr( "CH*"+ '.scaleX', inputTextScaleUI2)
-    cmds.setAttr( "CH*"+ '.scaleY', inputTextScaleUI2)
-    cmds.setAttr( "CH*"+ '.scaleZ', inputTextScaleUI2)
+    cmds.move(boundingBox[1], "CH*"+'.scalePivot', y=True, absolute=True)
+    cmds.move(boundingBox[1], "CH*"+'.rotatePivot', y=True, absolute=True)
+    cmds.setAttr("CH*"+'.translateY', -boundingBox[1])
+    cmds.scale(scl, scl, scl, "CH*")
     
     
 def BG_shape_function(BG_iterations):
     
-    for j in range(0,BG_iterations):
+    for j in range(BG_iterations):
+        # Generate random dimensions and shape
+        randShape = random.choice([cmds.polySphere, cmds.polyCube, cmds.polyCylinder, cmds.polyCone])
+        randArgs = [random.uniform(0.1, 80) for _ in range(randShape.__code__.co_argcount - 2)]
+        randMeshName = f"BG_{randShape.__name__}{j}"
         
-        randSphereRadiusNum = random.uniform(0.1, 80)
-        randPlaneNumW = random.uniform(0.1, 80)
-        randPlaneNumH = random.uniform(0.1, 80)
-        randCylinderNumH = random.uniform(0.1, 80)
-        randCylinderRadius = random.uniform(1, 80)
-        randCylinderNumH = random.uniform(0.1, 80)
-        randCylinderRadius = random.uniform(1, 80)
-        randCubeNumW = random.uniform(0.1, 80)
-        randCubeNumH = random.uniform(0.1, 80)
-        randCubeNumD = random.uniform(0.1, 80)
+        # Create shape
+        mesh_type = randShape(n=randMeshName, *randArgs, sx=8, sy=8, sz=8)
         
-        randShape = round(random.uniform(1,4),0)
+        # Generate random selection
+        randSelection = random.choice([1, 2, 3, 4, 5])
         
-        if randShape == 1.0:
-            
-            mesh_type = cmds.polySphere(n="BG_Esfera" + str(j),r=randSphereRadiusNum,sx=8,sy=8)
-            
-        if randShape == 2.0:
-            
-            mesh_type = cmds.polyCube(n="BG_Cubo" + str(j),d = randCubeNumD, h = randCubeNumH, w = randCubeNumW,sx=8,sy=8,sz=8)
-            
-        if randShape == 3.0:
-            
-            mesh_type = cmds.polyCylinder(n="BG_Cilindro" + str(j),r = randCylinderRadius, h = randCylinderNumH,sx=8,sy=8,sz=8)
-            
-        if randShape == 4.0:
-            
-            mesh_type = cmds.polyCone(n="BG_Cono" + str(j),r = randCylinderRadius, h = randCylinderNumH,sx=8,sy=8,sz=8)
-        
-        randSelection = round(random.uniform(1,4),0)
-        
+        # Get bounding boxes
         boundingBoxCH = cmds.xform("CH*", q=True, bb=True, ws=True)
-        
         boundingBoxMeshType = cmds.xform(mesh_type, q=True, bb=True, ws=True)
-  
-        if randSelection == 1.0:
-            
-            polyEdgeCH = boundingBoxCH[0]
-            
-            polyEdgeMeshType = boundingBoxMeshType[3]
-            
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.scalePivot', x=True, absolute=True)
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.rotatePivot', x=True, absolute=True)
-            
-            cmds.setAttr(mesh_type[0] + ".translateX", -polyEdgeMeshType+(polyEdgeCH/2)+(polyEdgeCH/4))
-            
-            
-        if randSelection == 5.0:
-            
-            polyEdgeCH = boundingBoxCH[4] 
-            
-            polyEdgeMeshType = boundingBoxMeshType[1]
-            
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.scalePivot', y=True, absolute=True)
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.rotatePivot', y=True, absolute=True)
-            
-            cmds.setAttr(mesh_type[0] + ".translateY", -polyEdgeMeshType+polyEdgeCH)
-            
-            
-        if randSelection == 3.0:
-            
-            polyEdgeCH = boundingBoxCH[2] 
-            
-            polyEdgeMeshType = boundingBoxMeshType[5]
-            
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.scalePivot', z=True, absolute=True)
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.rotatePivot', z=True, absolute=True)
-            
-            cmds.setAttr(mesh_type[0] + ".translateZ", -(polyEdgeMeshType)+(polyEdgeCH/2)+(polyEdgeCH/4))
-            
-            
-        if randSelection == 4.0:
-            
-            polyEdgeCH = boundingBoxCH[3] 
-            
-            polyEdgeMeshType = boundingBoxMeshType[0]
-            
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.scalePivot', x=True, absolute=True)
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.rotatePivot', x=True, absolute=True)
-            
-            cmds.setAttr(mesh_type[0] + ".translateX", (-polyEdgeMeshType)+(polyEdgeCH/2)+(polyEdgeCH/4))
-            
-            
-        if randSelection == 2.0:
-            
-            polyEdgeCH = boundingBoxCH[2] 
-            
-            polyEdgeMeshType = boundingBoxMeshType[4]
-            
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.scalePivot', y=True, absolute=True)
-            cmds.move(polyEdgeMeshType, mesh_type[0]+ "*" + '.rotatePivot', y=True, absolute=True)
-            
-            cmds.setAttr(mesh_type[0] + ".translateY", -polyEdgeMeshType)
-            
-            
+        
+        # Translate shape
+        polyEdgeCH = boundingBoxCH[randSelection - 1]
+        polyEdgeMeshType = boundingBoxMeshType[randSelection % 6]
+        axis = "XYZ"[randSelection % 3]
+        offset = -polyEdgeMeshType + (polyEdgeCH/2) + (polyEdgeCH/4)
+        cmds.move(offset, f"{mesh_type[0]}*{'.scalePivot, .rotatePivot'}", **{f"{axis}":True, "absolute":True})
+        
+        # Set displaySmoothMesh attribute
         cmds.setAttr(mesh_type[0] + '.displaySmoothMesh', 2)
         
 def BG_shape_group_function():
@@ -1006,141 +757,53 @@ def shape_color_function():
 
 def generate_function(inputTextIterations):        
     
-    # CH SHAPE CREATOR
-
-    sliderHeightUI = cmds.floatSliderGrp(sliderHeight, q = True, v = True)
+    # Delete objects
+    objects_to_delete = ["Cubo_centro*", "Cubo_lateral*", "Esfera_centro*", "Esfera_lateral*", "Cubo_merged*", 
+                         "Cilindro_centro*", "Cilindro_lateral*", "Cono_centro*", "Cono_lateral*", 
+                         "Toroide_centro*", "Toroide_lateral*", "Piramide_centro*", "Piramide_lateral*", 
+                         "BG_Esfera*", "BG_Cubo*", "BG_Cilindro*", "BG_Cono*"]
     
-    inputTextIterationsUI = cmds.intField("inputTextIterations2", q = True, v = 1)
+    for obj in objects_to_delete:
+        if cmds.objExists(obj):
+            cmds.delete(obj)
     
-    randShapeSelection = 0
+    # Shape creator function
+    slider_height = cmds.floatSliderGrp("sliderHeight", q=True, v=True)
+    input_text_iterations_ui = cmds.intField("inputTextIterations2", q=True, v=1)
+    rand_shape_selection, rand_shape_selection2, rand_selection_perspective = 0, 0, 0
+    shape_creator_function(input_text_iterations_ui, slider_height, rand_shape_selection, 
+                           rand_shape_selection2, rand_selection_perspective)
     
-    randShapeSelection2 = 0
-    
-    randSelectionPerspective = 0
-        
-    if cmds.objExists( "Cubo_centro*"):
-        cmds.delete("Cubo_centro*")
-    if cmds.objExists("Cubo_lateral*"):
-        cmds.delete("Cubo_lateral*")
-    if cmds.objExists("Esfera_centro*"):
-        cmds.delete("Esfera_centro*")
-    if cmds.objExists("Esfera_lateral*"):
-        cmds.delete("Esfera_lateral*")
-    if cmds.objExists("Cubo_merged*"):
-        cmds.delete("Cubo_merged*")
-    if cmds.objExists("Cilindro_centro*"):
-        cmds.delete("Cilindro_centro*")
-    if cmds.objExists("Cilindro_lateral*"):
-        cmds.delete("Cilindro_lateral*")
-    if cmds.objExists("Cono_centro*"):
-        cmds.delete("Cono_centro*")
-    if cmds.objExists("Cono_lateral*"):
-        cmds.delete("Cono_lateral*")  
-    if cmds.objExists("Toroide_centro*"):
-        cmds.delete("Toroide_centro*")
-    if cmds.objExists("Toroide_lateral*"):
-        cmds.delete("Toroide_lateral*")
-    if cmds.objExists("Piramide_centro*"):
-        cmds.delete("Piramide_centro*")
-    if cmds.objExists("Piramide_lateral*"):
-        cmds.delete("Piramide_lateral*")
-        
-        shape_creator_function(inputTextIterationsUI,sliderHeightUI,randShapeSelection,randShapeSelection2,randSelectionPerspective)
-        
-    else:
-        
-        shape_creator_function(inputTextIterationsUI,sliderHeightUI,randShapeSelection,randShapeSelection2,randSelectionPerspective)     
-        
-    # CH SHAPE GROUP
-        
+    # Shape group function
     if cmds.objExists("CH*"):
-        
         cmds.delete("CH*")
-        
-        shape_group_function(sliderHeightUI)   
-        
-    else:
-        
-        shape_group_function(sliderHeightUI)
-        
-        
-    # BG SHAPE CREATOR
+    shape_group_function(slider_height)
     
-    inputTextIterationsBGUI = cmds.intField("inputTextIterationsBG2", q = True, v = 1)
-    
-    if inputTextIterationsBGUI == 0:
-    
+    # BG shape creator function
+    input_text_iterations_bg_ui = cmds.intField("inputTextIterationsBG2", q=True, v=1)
+    if input_text_iterations_bg_ui == 0:
         if cmds.objExists("BG"):
-                
             cmds.delete("BG")
-    
-    if inputTextIterationsBGUI != 0:
-    
-        if cmds.objExists( "BG_Esfera*" or  "BG_Cubo*" or "BG_Cilindro*" or "BG_Cono*"):
-      
-            try:cmds.delete("BG_Esfera*")
-            except: pass
-            try:cmds.delete("BG_Cubo*")
-            except: pass
-            try:cmds.delete("BG_Cilindro*")
-            except: pass
-            try:cmds.delete("BG_Cono*")
-            except: pass
-            
-            BG_shape_function(inputTextIterationsBGUI)
-            
-        else:
-            
-            BG_shape_function(inputTextIterationsBGUI)
-                   
-        # BG SHAPE GROUP
-        
-        if cmds.objExists("BG"):
-            
-            cmds.delete("BG")
-            
-            BG_shape_group_function()
-        
-        else:
-            
-            BG_shape_group_function()
-     
-    
-    # SHAPE COLOR
-        
-    if cmds.objExists("shape_color" or "BG_shape_color"):
-        
-        cmds.delete("shape_color")
-        cmds.delete("layeredTexture")
-        cmds.delete("writeColor01")
-        cmds.delete("writeColor02")
-        cmds.delete("ambientOcclusion")
-        cmds.delete("utility")
-        cmds.delete("ramp")
-        cmds.delete("setRange")
-        cmds.delete("surfaceLuminance")
-        cmds.delete("AOV_ambientOcclusion")
-        cmds.delete("AOV_utility")
-        
-        cmds.delete("BG_shape_color")
-        cmds.delete("BG_layeredTexture")
-        cmds.delete("BG_writeColor01")
-        cmds.delete("BG_writeColor02")
-        cmds.delete("BG_ambientOcclusion")
-        cmds.delete("BG_utility")
-        cmds.delete("BG_ramp")
-        cmds.delete("BG_setRange")
-        cmds.delete("BG_surfaceLuminance")
-        
-        for node in cmds.ls(type="aiAOV"):
-            if not cmds.referenceQuery(node, inr=1):
-                cmds.delete(node)
-        
-        shape_color_function()
-        
+    elif cmds.objExists("BG_Esfera*") or  cmds.objExists("BG_Cubo*") or cmds.objExists("BG_Cilindro*") or cmds.objExists("BG_Cono*"):
+        cmds.delete("BG_Esfera*", "BG_Cubo*", "BG_Cilindro*", "BG_Cono*")
+        BG_shape_function(input_text_iterations_bg_ui)
     else:
+        BG_shape_function(input_text_iterations_bg_ui)
         
-        shape_color_function()
+    # BG shape group function
+    if cmds.objExists("BG"):
+        cmds.delete("BG")
+    BG_shape_group_function()
+    
+    # Shape color function
+    for obj in ["shape_color", "BG_shape_color"]:
+        if cmds.objExists(obj):
+            cmds.delete(obj, "layeredTexture", "writeColor01", "writeColor02", "ambientOcclusion", "utility", 
+                        "ramp", "setRange", "surfaceLuminance")
+    for node in cmds.ls(type="aiAOV"):
+        if not cmds.referenceQuery(node, inr=1):
+            cmds.delete(node)
+    shape_color_function()
         
 def emerge_function(*args):
     
